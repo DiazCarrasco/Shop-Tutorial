@@ -12,7 +12,7 @@ import { ProductAlertsComponent } from '../product-alerts/product-alerts.compone
   styleUrl: './product-list.component.css'
 })
 export class ProductListComponent {
-  products = [...products];
+  products = [...products].filter(product => product.stock > 0);
 
   share() {
     window.alert('The product has been shared!');

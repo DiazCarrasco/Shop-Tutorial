@@ -12,7 +12,15 @@
     <p *ngIf="product.description">
       Description: {{ product.description }}
     </p>
-  
+
+    <p *ngIf="product.stock > 4">
+      Stock: {{ product.stock }}
+    </p>
+
+    <p *ngIf="product.stock <= 4" style="color: red;">
+      Stock bajo: {{ product.stock }}
+    </p>
+
     <button type="button" (click)="share()">
       Share
     </button>
